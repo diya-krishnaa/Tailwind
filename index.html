@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <!-- navbar -->
+<nav class="bg-white border-gray-200 dark:bg-lime-950">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="./images/logo.jpg" class=" w-16 h-16 rounded-full" alt="Logo" />
+    </a>
+    <div class=" bg-lime-950 flex md:order-2">
+      <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 me-1">
+        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+        </svg>
+        <span class="sr-only">Search</span>
+      </button>
+      <div class="relative hidden md:block">
+        <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+          <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+          </svg>
+          <span class="sr-only">Search icon</span>
+        </div>
+        <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+      </div>
+      <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+          <span class="sr-only">Open main menu</span>
+          <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
+          </svg>
+      </button>
+    </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none">
+            <svg class="w-4 h-4 text-gray-500 dark:text-gray-400" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
+              <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"/>
+            </svg>
+          </div>
+          <input type="text" id="search-navbar" class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+        </div>
+        <ul class="flex flex-col p-4 md:p-0 mt-4 font-medium border border-gray-100 rounded-lg bg-lime-950 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-lime-950 dark:border-gray-700">
+          <li>
+            <a href="#" class="block py-2 px-3 text-lime-200 bg-gray-700 rounded md:bg-transparent md:text-lime-200 md:p-0 md:dark:text-lime-200" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="#about" class="block py-2 px-3 text-gray-900 rounded hover:text-lime-200 md:hover:bg-transparent md:hover:text-lime-200 md:p-0 md:dark:hover:text-lime-200 dark:text-white dark:hover:bg-gray-700 dark:hover:text-lime-200 md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+          </li>
+          <li>
+            <a href="#products" class="block py-2 px-3 text-gray-900 rounded hover:text-lime-200 md:hover:bg-transparent md:hover:text-lime-200 md:p-0 dark:text-white md:dark:hover:text-lime-200 dark:hover:bg-gray-700 dark:hover:text-lime-200 md:dark:hover:bg-transparent dark:border-gray-700">Product</a>
+          </li>
+          <li>
+            <a href="#services" class="block py-2 px-3 text-gray-900 rounded hover:text-lime-200 md:hover:bg-transparent md:hover:text-lime-200 md:p-0 dark:text-white md:dark:hover:text-lime-200 dark:hover:bg-gray-700 dark:hover:text-lime-200 md:dark:hover:bg-transparent dark:border-gray-700">Services</a>
+          </li>
+          <li>
+            <a href="#contact" class="block py-2 px-3 text-gray-900 rounded hover:text-lime-200 md:hover:bg-transparent md:hover:text-lime-200 md:p-0 dark:text-white md:dark:hover:text-lime-200 dark:hover:bg-gray-700 dark:hover:text-lime-200 md:dark:hover:bg-transparent dark:border-gray-700">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- home -->
+  <section class="flex items-center justify-center bg-cover bg-center bg-no-repeat h-screen" style="background-image: url('./images/home.avif');">
+    <div class="text-center p-5 bg-opacity-50 bg-white md:mx-10 md:my-24">
+      <h1 class="text-3xl md:text-4xl lg:text-5xl text-yellow-700">WELCOME TO INNOVITAL</h1>
+      <span class="block mt-4 text-xs md:text-sm lg:text-base text-slate-800">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio maiores non, commodi ab porro ea cumque eos delectus nisi iusto veniam illum blanditiis magnam, corporis velit tenetur rerum amet modi.
+      </span>
+    </div>
+  </section>
+  
+  
+  <!-- About Section -->
+<section id="about" class="bg-white py-16">
+  <div class="max-w-screen-xl mx-auto text-center px-4">
+      <h2 class="text-3xl font-bold text-gray-900">About Us</h2>
+      <p class="mt-4 text-gray-600">At Innovital, we create personalized, functional, and stylish interiors that reflect your unique taste and lifestyle. Let us transform your space into a beautiful, livable work of art.</p>
+  </div>
+  <section height="100vh">
+    <div id="content" class="text-center mt-20 ">
+      <!-- <a href="#about" class="mt-6 inline-block bg-stone-500 text-white px-6 py-3 rounded-lg hover:bg-red-700">Learn More</a> -->
+      <div id="default-carousel" class="relative w-full" data-carousel="static">
+         
+          <!-- Carousel wrapper -->
+          <div class="relative h-56 overflow-hidden rounded-lg md:h-96 my-2">
+              
+            <!-- Item 1 -->
+            <div class="duration-700 ease-in-out " data-carousel-item="active">
+              <img src="./images/carousal-1.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Product Image 1">
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./images/carousal-2.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Product Image 2">
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./images/carosal-3.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Product Image 3">
+            </div>
+            <!-- Item 4 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./images/carousal-4.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Product Image 4">
+            </div>
+            <!-- Item 5 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+              <img src="./images/carousal-5.jpg" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="Product Image 5">
+            </div>
+          </div>
+      
+          <!-- Slider indicators -->
+          <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+          </div>
+      
+          <!-- Slider controls -->
+          <button type="button" class="absolute top-0 left-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+              <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4"/>
+              </svg>
+              <span class="sr-only">Previous</span>
+            </span>
+          </button>
+          <button type="button" class="absolute top-0 right-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50 group-focus:ring-4 group-focus:ring-white group-focus:outline-none">
+              <svg class="w-4 h-4 text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4"/>
+              </svg>
+              <span class="sr-only">Next</span>
+            </span>
+          </button>
+        </div>
+      <button type="button" class=" my-10 text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5 me-2 mb-2 dark:bg-gray-800 dark:text-white dark:border-gray-600 dark:hover:bg-gray-700 dark:hover:border-gray-600 dark:focus:ring-gray-700"><a href="#about">Learn More</a></button>
+  </div>
+</section>
+</section>
+
+
+<!-- Products Section -->
+<section id="products" class="bg-gray-100 py-16">
+  <div class="max-w-screen-xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold text-gray-900">Our Products</h2>
+    <p class="mt-4 text-gray-600">Explore our exquisite collection of designer furniture, crafted to transform your living spaces into stylish, personalized sanctuaries.</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 mt-8">
+      <div class="relative group bg-white shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img class="w-full h-48 object-cover" src="./images/design1.webp" alt="Landscape Design">
+        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <h2 class="text-white text-xl font-semibold">Landscape Design</h2>
+        </div>
+      </div>
+      <div class="relative group bg-white shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img class="w-full h-48 object-cover" src="./images/product-2.jpg" alt="Bathroom Remodelling">
+        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <h2 class="text-white text-xl font-semibold">Bathroom Remodelling</h2>
+        </div>
+      </div>
+      <div class="relative group bg-white shadow-md rounded-lg overflow-hidden transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
+        <img class="w-full h-48 object-cover" src="./images/design2.jpg" alt="Kitchen Remodelling">
+        <div class="absolute inset-0 bg-black bg-opacity-30 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+          <h2 class="text-white text-xl font-semibold">Kitchen Remodelling</h2>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Services Section -->
+<section id="services" class="bg-white py-16">
+  <div class="max-w-screen-xl mx-auto text-center px-4">
+    <h2 class="text-3xl font-bold text-gray-900">Our Services</h2>
+    <p class="mt-4 text-gray-600">We provide exceptional customer service, ensuring your satisfaction with every purchase.</p>
+    
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mt-12">
+      <!-- Card 1 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/service-1.jpg" alt="Service 1">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Interior Design</h3>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/service-2.avif" alt="Service 2">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Custom Furniture</h3>
+        </div>
+      </div>
+      <!-- Card 3 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/service-3.avif" alt="Service 3">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Renovation Services</h3>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/homestaging.avif" alt="Service 4">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Home Staging</h3>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/homeautomation.avif" alt="Service 5">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Home Automation</h3>
+        </div>
+      </div>
+      <!-- Card 6 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/flooring.avif" alt="Service 6">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Flooring Installation</h3>
+        </div>
+      </div>
+      <!-- Card 7 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/cleaning.avif" alt="Service 7">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Cleaning and Maintenance Services</h3>
+        </div>
+      </div>
+      <!-- Card 8 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/event.jpg" alt="Service 8">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Event and Space Planning</h3>
+        </div>
+      </div>
+      <!-- Card 9 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/makeover.jpg" alt="Service 9">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Room Makeover</h3>
+        </div>
+      </div>
+      <!-- Card 10 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/designing.avif" alt="Service 10">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Room Design</h3>
+        </div>
+      </div>
+      <!-- Card 11 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/painting.jpg" alt="Service 11">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Residential and Commercial Painting</h3>
+        </div>
+      </div>
+      <!-- Card 12 -->
+      <div class="group relative bg-gray-100 shadow-lg rounded-lg overflow-hidden transform transition-transform duration-500 hover:scale-105 hover:shadow-xl hover:bg-gray-200">
+        <div class="h-48 overflow-hidden">
+          <img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" src="./images/architect.jpg" alt="Service 12">
+        </div>
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
+          <h3 class="text-white text-xl font-semibold">Architectural Consultation</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!-- Contact Section -->
+<section id="contact" class="bg-gray-100 py-16">
+  <div class="max-w-screen-md mx-auto text-center px-4">
+    <h2 class="text-3xl font-semibold text-gray-800">Contact Us</h2>
+    <p class="mt-2 text-gray-600">We're here to help. Get in touch with us!</p>
+    <form action="#" method="POST" class="mt-8">
+      <div class="space-y-4">
+        <input type="text" name="name" placeholder="Name" class="w-full border border-green-700 rounded-md px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 hover:bg-green-50 transition">
+        <input type="email" name="email" placeholder="Email" class="w-full border border-green-700 rounded-md px-4 py-2 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 hover:bg-green-50 transition">
+        <textarea name="message" placeholder="Message" class="w-full border border-lime-600 rounded-md px-4 py-2 focus:border-lime-600 focus:ring-1 focus:ring-lime-700 hover:bg-green-50 transition" rows="4"></textarea>
+        <button type="submit" class="w-full bg-green-900 text-white rounded-md py-2 hover:bg-green-700 transition">Send Message</button>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+<!-- Footer -->
+<footer class="bg-gray-800 py-6">
+  <div class="max-w-screen-xl mx-auto text-center text-gray-300">
+      <p>&copy; 2024 Innovital. All rights reserved.</p>
+      <a href="#" class="fixed bottom-4 right-4 bg-transparent text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-colors duration-300 ease-in-out">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 15l-7-7-7 7"></path>
+        </svg>
+      </a>
+      
+  </div>
+</footer>
+
+  
+    </div>
+    
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.5/flowbite.min.js"></script>
+</html>
